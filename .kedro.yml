@@ -1,0 +1,6 @@
+context_path: minco.run.ProjectContext
+project_name: "minco"
+project_version: "0.16.6"
+package_name: "minco"
+hooks:
+  - minco.hooks.project_hooks
