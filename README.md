@@ -21,7 +21,6 @@ Inicializemos el ambiente con
 great_expectations init
 ```
 ![Deberia ser algo asi](./pngs/ge1.png)
-In order to get the best out of the template:
 
 
 Luego debemos confirmar el tipo de dataset, path y nombre que queremos darle.
@@ -85,17 +84,10 @@ great_expectations datasource new
 ```
 y volveremos a pasar por el menu para agregar un dataset.
 
-
-
-
-
-
-
-
-
-
-
-
+## Realizar un nuevo profile
+```
+great_expetations datasource profile <my_dataset>
+```
 
 
 ##################
