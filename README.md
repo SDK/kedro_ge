@@ -2,18 +2,103 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/SDK/kedro_ge)
 
-# minco
+# Data Quality lab              
 
-## Overview
+## Intro
 
-This is your new Kedro project, which was generated using `Kedro 0.16.6`.
+Este lab esta diseñado para servir como metodo de aprendizaje de Kedro + Great expectations
 
-Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
+Contiene 2 datasets
+* Iris data
+* Netflix Tittles
 
-## Rules and guidelines
 
+## Iniciar Catalogo de GE 
+
+Inicializemos el ambiente con 
+
+```
+great_expectations init
+```
+![Deberia ser algo asi](./pngs/ge1.png)
 In order to get the best out of the template:
 
+
+Luego debemos confirmar el tipo de dataset, path y nombre que queremos darle.
+
+![Deberia ser algo asi](./pngs/ge2.png)
+
+Confirmemos para hacer el profiling:
+```
+================================================================================
+
+Would you like to profile new Expectations for a single data asset within your new Datasource? [Y/n]: y
+
+Would you like to:
+    1. choose from a list of data assets in this datasource
+    2. enter the path of a data file
+: 1
+
+Which data would you like to use?
+    1. iris (file)
+    2. netflix_titles (file)
+    Don't see the name of the data asset in the list above? Just type it
+: 1
+
+Name the new Expectation Suite [iris.warning]: 
+
+Great Expectations will choose a couple of columns and generate expectations about them
+to demonstrate some examples of assertions you can make about your data.
+
+Great Expectations will store these expectations in a new Expectation Suite 'iris.warning' here:
+
+  file:///workspace/kedro_ge/great_expectations/expectations/iris/warning.json
+
+Would you like to proceed? [Y/n]: 
+
+Generating example Expectation Suite...
+
+Done generating example Expectation Suite
+
+================================================================================
+
+Would you like to build Data Docs? [Y/n]: 
+
+The following Data Docs sites will be built:
+
+ - local_site: file:///workspace/kedro_ge/great_expectations/uncommitted/data_docs/local_site/index.html
+
+Would you like to proceed? [Y/n]: 
+
+Building Data Docs...
+
+Done building Data Docs
+
+Would you like to view your new Expectations in Data Docs? This will open a new browser window. [Y/n]: 
+```
+
+## Agregar Datasource a GE 
+
+para agregar un nuevo dataset basta que corramos:
+```
+great_expectations datasource new
+```
+y volveremos a pasar por el menu para agregar un dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##################
 * Don't remove any lines from the `.gitignore` file we provide
 * Make sure your results can be reproduced by following a [data engineering convention](https://kedro.readthedocs.io/en/stable/11_faq/01_faq.html#what-is-data-engineering-convention)
 * Don't commit data to your repository
