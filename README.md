@@ -89,15 +89,30 @@ great_expetations datasource profile <my_dataset>
 
 ## Basic commands:
 
+* `great_expectations suite edit`
+* `great_expectations suite new`
+* `great_expectations suite list`
+* `great_expectations suite delete`
+* `great_expectations docs build`
+* `great_expectations docs clean`
+* `great_expectations checkpoint new`
+* `great_expectations checkpoint list`
+* `great_expectations checkpoint run`
+* `great_expectations checkpoint script`
+* `great_expectations datasource list`
+* `great_expectations datasource profile`
+* `great_expectations datasource delete`
+* `great_expectations validation-operator run`
+* `great_expectations init`
 
+## Key ideas
 
+https://docs.greatexpectations.io/en/latest/reference/core_concepts.html#key-ideas
 
 https://docs.greatexpectations.io/en/latest/reference/glossary_of_expectations.html
 
 
 
 ```
-kedro jupyter notebook --NotebookApp.allow_origin=\'$(gp url 88
-88)\'
-
+kedro jupyter notebook --NotebookApp.allow_origin=\'$(gp url 8888)\'
 ```
