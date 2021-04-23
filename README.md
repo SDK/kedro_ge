@@ -109,9 +109,17 @@ great_expetations datasource profile <my_dataset>
 
 https://docs.greatexpectations.io/en/latest/reference/core_concepts.html#key-ideas
 
+## Glosario de Expectations
 https://docs.greatexpectations.io/en/latest/reference/glossary_of_expectations.html
 
 
+## Known bugs para este ambiente en GitPod
+
+Existe un Kernel error cuando se edita la Suite desde
+```
+great_expectations suite edit <suite_name>
+```
+para remediar esto, es mejor abrir una sesion de Kedro con un parametro para abrir el puerto:
 
 ```
 kedro jupyter notebook --NotebookApp.allow_origin=\'$(gp url 8888)\'
