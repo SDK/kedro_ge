@@ -18,7 +18,9 @@ jobs:
             pip install -r requirements.txt
       - python/save-cache
       - run:
-          command: kedro test
+          command: |
+            . venv/bin/activate
+            kedro test
           name: Test
 
 workflows:
