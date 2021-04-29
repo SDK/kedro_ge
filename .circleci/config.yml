@@ -5,11 +5,10 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: python/default
+    docker:
+      - image: cimg/python:3.8.9
     steps:
-      - checkout:
-          post:
-            - pip install -U pip setuptools virtualenv
+      - checkout
       - python/load-cache
       - python/install-deps
       - python/save-cache
