@@ -1,4 +1,4 @@
-pytest
+# pytest
 kedro==0.16.6
 kedro[parquet]==0.16.6
 great_expectations
