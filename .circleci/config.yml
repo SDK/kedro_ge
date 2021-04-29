@@ -9,10 +9,15 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps
+      - run:
+          name: Install Python deps in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
       - python/save-cache
       - run:
-          command: .kedro test
+          command: kedro test
           name: Test
 
 workflows:
