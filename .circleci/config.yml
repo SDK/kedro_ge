@@ -9,7 +9,6 @@ jobs:
     steps:
       - checkout:
           post:
-            *****
             - pip install -U pip setuptools virtualenv
       - python/load-cache
       - python/install-deps
