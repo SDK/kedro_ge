@@ -23,7 +23,7 @@ jobs:
             . venv/bin/activate
             kedro test \
               --junitxml="docs/coverage/test.xml" \
-              --cov-report="docs/html/"
+              --cov-report=html:"docs/html/"
           name: Test
       - run:
           command: |
