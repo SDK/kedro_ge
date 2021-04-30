@@ -21,10 +21,11 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            kedro test --cov-report=xml:"./docs/coverage/coverage.xml"
+            kedro test --cov-report=xml:"docs/coverage/coverage.xml"
           name: Test
       - run:
           command: |
+            . venv/bin/activate
             kedro package
           name: Build egg & wheel
       - store_artifacts:
