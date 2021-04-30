@@ -21,13 +21,13 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            kedro test --cov-report=xml
+            kedro test --cov-report=xml:"./docs/coverage/coverage.xml"
           name: Test
       - store_artifacts:
-          path: build/ 
+          path: build/dist/ 
           destination: tr1
       - store_test_results:
-          path: coverage.xml
+          path: docs/coverage/
 
 workflows:
   main:
