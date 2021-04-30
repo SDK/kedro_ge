@@ -21,7 +21,7 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            kedro test --cov-report=xml:"docs/coverage/coverage.xml"
+            kedro test --junitxml="docs/coverage/coverage.xml"
           name: Test
       - run:
           command: |
