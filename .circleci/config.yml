@@ -21,7 +21,9 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            kedro test --junitxml="docs/coverage/coverage.xml"
+            kedro test \
+              --junitxml="docs/coverage/test.xml" \
+              --cov-report="docs/html/"
           name: Test
       - run:
           command: |
@@ -31,6 +33,9 @@ jobs:
       - store_artifacts:
           path: src/dist/ 
           destination: tr1
+      - store_artifacts:
+          path: docs/html/
+          destination: coverage
       - store_test_results:
           path: docs/coverage/
 
