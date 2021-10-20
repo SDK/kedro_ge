@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
+  shiftleft: shiftleft/shiftleft@1.0
 
 jobs:
   build-and-test:
@@ -43,3 +44,9 @@ workflows:
   main:
     jobs:
       - build-and-test
+  workflow:
+    jobs:
+      - shiftleft/analyze:
+          app: kedro_ge 
+          target: src
+          language: python
