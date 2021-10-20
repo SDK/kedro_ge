@@ -47,6 +47,11 @@ workflows:
   workflow:
     jobs:
       - shiftleft/analyze:
+          target: src 
           app: kedro_ge 
-          target: src
-          language: python
+          language: python 
+          access-token: SHIFTLEFT_ACCESS_TOKEN
+          org-id: SHIFTLEFT_ORG_ID
+          pre-analyze:
+           - steps:
+              
